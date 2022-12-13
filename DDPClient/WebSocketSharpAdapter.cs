@@ -43,7 +43,7 @@ namespace DdpClient
 
         private void WebSocketOnClosed(object sender, EventArgs e) => Closed?.Invoke(this, e);
 
-        private void WebSocketOnError(object sender, ErrorEventArgs e) => Error?.Invoke(this, e.Exception);
+        private void WebSocketOnError(object sender, WebSocketSharp.ErrorEventArgs e) => Error?.Invoke(this, e.Exception);
 
         private void WebSocketOnOpened(object sender, EventArgs e) => Opened?.Invoke(this, e);
 
